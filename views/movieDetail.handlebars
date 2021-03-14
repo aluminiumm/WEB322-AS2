@@ -1,0 +1,12 @@
+<section id="movie-detail">
+  <div id="grid-section-detail">
+    <div><img src="/images/{{movie.id}}L.jpg" alt="{{movie.title}} poster"></div><!-- /l-grid -->
+    <div><h1>{{movie.title}}</h1>
+      <p class="readable">{{movie.description}}</p>
+      {{#if movie.priceRental}}
+      <p>Rent: ${{movie.priceRental}}</p>
+      {{/if}}
+      <p>Buy: ${{movie.priceBuy}}</p>
+    </div><!-- /r-grid -->
+  </div><!-- /grid-section-detail -->
+</section>

@@ -1,0 +1,58 @@
+<section>
+    <div class="form" id="login">
+        <h1>Welcome to VUDU</h1>
+        
+        <div id="coupon">
+            <p id="read-txt">Limited time offer!! All rental, purchase</p>
+            <p id="offer"><strong>50</strong>%OFF</p>
+            <p id="code">WELCOME50</p>
+            <p id="date">*Valid from March 15 - March 29, 2021</p>
+        </div>
+    </div><!--/ form -->
+</section>
+
+    <section class="glid-index">
+        <div>
+            <h2>Featured Movies</h2>
+            <div class="grid-movies">
+            {{#each movies}}
+                {{#if this.featured}}
+                    {{#if this.tv}}
+                    {{else}}
+                    <div>
+                        <a href="/movies/{{this.id}}">
+                        <img src="/images/{{this.id}}S.jpg" alt="poster"><br>
+                        {{this.title}}</a>
+                    </div>
+                    {{/if}}
+                {{/if}}
+            {{/each}}
+            </div><!-- /grid-movies -->
+        </div>
+        <div>
+            <h2>Featured TV Shows</h2>
+            <div class="grid-movies">
+            {{#each movies}}
+                {{#if this.featured}}
+                    {{#if this.tv}}
+                    <div>
+                        <a href="/movies/{{this.id}}">
+                        <img src="/images/{{this.id}}S.jpg" alt="poster"><br>
+                        {{this.title}}</a>
+                    </div>
+                    {{/if}}
+                {{/if}}
+            {{/each}}
+            </div><!-- /grid-movies -->
+        </div>
+    </section><!-- /grid-index -->
+
+    <section class="glid-index">
+        <div>
+            <span class="banner"><a href="#"><img src="images/bnr_movie.jpg" alt="Editors Choice"></a></span>
+        </div>
+        <div>
+            <span class="banner"><a href="#"><img src="images/bnr_tv.jpg" alt="TV Season Sale"></a></span>
+        </div>
+    </section><!-- /grid-index -->
+</section><!-- /index -->

@@ -1,0 +1,13 @@
+<section id="movies">
+    <h1>Movies &amp; TV Shows</h1>
+
+		<div class="grid-movies">
+        {{#each movies}}
+            <div>
+                <a href="/movies/{{this.id}}">
+                <img src="/images/{{this.id}}S.jpg" alt="poster"><br>
+                {{this.title}}</a>
+            </div>
+        {{/each}}
+        </div>
+</section>

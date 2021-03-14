@@ -1,0 +1,289 @@
+/*------ fonts ------ */
+/* base */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* site logo */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap');
+/* welcome coupon */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@900&display=swap');
+
+/*------ common ------ */
+html {
+	display: flex;
+	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+    background: #000066;
+}
+body {
+    width: 80%;
+	margin: 0;
+	padding: 0;
+    color: white;
+}
+a:link, a:visited {
+    color: #0099FF;
+    text-decoration: none;
+}
+a:hover, button:hover, input:hover {
+    opacity: 0.7;
+}
+
+/* form */
+div.form {
+	width: 480px;
+	padding: 40px;
+	margin: 80px auto;
+	color: #000066;
+	background: white;
+	border-radius: 10px;
+}
+div.form h1 {
+	margin-top: 0;
+}
+div.form input {
+	width: 455px;
+	font-size: 110%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 2px solid lightgrey;
+	border-radius: 5px;
+}
+div.form input[type="submit"], div.form button {
+	width: 100%;
+	color: white;
+	font-size: 110%;
+	background: #0099FF;
+	padding: 13px;
+	margin-bottom: 10px;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.error-fields {
+    color: red;
+}
+/* banner */
+.banner img {
+	width: 100%;
+}
+/*------ header ------ */
+header, footer {
+	background: #000033;
+}
+header > nav#grid-header {
+	display: grid;
+	grid-template-columns: auto 6fr auto;
+}
+/* site logo */
+header > nav > div#logo {
+    font-size: 28px;
+    font-family: 'Exo 2', sans-serif;
+	color: white;
+    padding: 10px 15px;
+}
+header > nav > div > ul {
+	padding-left: 0;
+}
+header > nav > div > ul > li {
+	display: inline;
+    padding: 0 10px;
+}
+header > nav a:link, nav a:visited {
+	color: white;
+}
+header > nav a:hover {
+    opacity: 0.7;
+}
+/* main menu: movies & TV */
+header > nav > div#mainMenu {
+	padding-left: 0;
+    font-size: 120%;
+}
+/* sub menu: registration, login */
+header > nav > div#subMenu {
+    text-align: right;
+    font-size: 90%;
+    padding: 10px 10px 0 0;
+}
+
+/*------ index ------ */
+section#index {
+	margin-bottom: 80px;
+}
+section#index h1 {
+	display: none;
+}
+section.glid-index {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5%;
+	margin-bottom: 30px;
+}
+section.glid-index > div > div.grid-movies {
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 5%;
+}
+/* carousel */
+.carousel-container .prev,
+.carousel-container .next {
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	text-decoration: none;
+	transition: all 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+.carousel-container .prev:hover,
+.carousel-container .next:hover {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+.carousel-container .prev {
+	left: 2px;
+}
+.carousel-container .next {
+	right: 2px;
+}
+.carousel-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	position: relative;
+}
+.carousel-container .slide {
+	display: none;
+	width: 100%;
+}
+.carousel-container .slide img {
+	width: 100%;
+}
+.carousel-container a:hover {
+    opacity: 1;
+}
+
+/*------ movie listing ------ */
+section#movies {
+	margin-bottom: 120px;
+}
+.grid-movies {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap: 1%;
+	row-gap: 5%;
+}
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.grid-movies {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5%;
+		row-gap: 5%;
+	}
+}
+.grid-movies > div > a {
+	color: white;
+	text-decoration: none;
+}
+.grid-movies img {
+	width: 100%;
+	margin-bottom: 5%;
+}
+.grid-movies span.outdate {
+	font-size: 80%;
+}
+.grid-movies span.rating {
+	font-size: 80%;
+	margin-left: 3%;
+}
+.grid-movies span.rating > strong {
+	color: black;
+	background: gold;
+	padding: 1px 3px;
+}
+
+/*------ movie detail ------ */
+#grid-section-detail {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 3%;
+}
+#grid-section-detail img {
+	width: 100%;
+}
+#grid-section-detail span.outdate {
+	margin-left: 3%;
+}
+#grid-section-detail span.rating {
+	margin-left: 3%;
+}
+#grid-section-detail span.rating > strong {
+	color: black;
+	background: gold;
+	padding: 1px 3px;
+}
+
+/*------ login, register ------ */
+div.form#login button {
+	width: 100%;
+}
+div.form#login button#register {
+	color: #0099FF;
+	border: 2px solid #0099FF;
+	background: white;
+}
+/*------ register (welcome coupon) ------ */
+#coupon {
+	text-align: center;
+	color: white;
+	background: crimson;
+}
+#coupon p {
+	margin: 0; padding: 0;
+}
+#coupon p#read-txt {
+	font-size: 150%;
+	padding: 20px 0 0 0;
+}
+#coupon p#offer {
+	font: 40px 'Chivo', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#coupon > p#offer > strong {
+	font-size: 100px;
+}
+#coupon p#code {
+	font-size: 150%;
+	border: 3px dashed white;
+	width: 50%;
+	margin: 0 auto 20px;
+	padding: 10px;
+}
+#coupon p#date {
+	padding-bottom: 20px;
+}
+
+/*------ footer ------ */
+footer {
+	display: grid;
+	grid-template-columns: 6fr auto;
+	font-size: 70%;
+	padding: 20px 20px 80px 20px;
+}
+footer > div > ul {
+	padding-left: 0;
+	margin: 0;
+	border-left: 1px solid #0099FF;
+}
+footer > div > ul > li {
+	display: inline;
+	padding: 0 10px;
+	border-right: 1px solid #0099FF;
+}
