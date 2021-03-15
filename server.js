@@ -16,7 +16,7 @@ app.post("/formRegistration",(req,res)=>{
       from: 'ayumi.reg@gmail.com', // Change to your verified sender
       subject: 'Welcome to VUDU',
       text: 'Welcome to VUDU',
-      html: '<div style="text-align:center; font-family:Roboto, sans-serif;"><h1 style="background:#000066; color:white; padding:20px;">Welcome to VUDU</h1><a href="/registWelcome"><button style="color:white; font-size:110%; background:#0099FF; padding:13px; border:0; border-radius:5px; cursor:pointer;">Click here to reveal 50% OFF coupon</button></a><p>*Valid from March 15 - March 29, 2021</p><p>&copy; 2021 Fandango</p></div>',
+      html: '<div style="text-align:center; font-family:Roboto, sans-serif;"><h1 style="background:#000066; color:white; padding:20px;">Welcome to VUDU</h1><a href="https://web322-as2.herokuapp.com/registWelcome"><button style="color:white; font-size:110%; background:#0099FF; padding:13px; border:0; border-radius:5px; cursor:pointer;">Click here to reveal 50% OFF coupon</button></a><p>*Valid from March 15 - March 29, 2021</p><p>&copy; 2021 Fandango</p></div>',
     }
     sgMail
       .send(msg)
@@ -43,7 +43,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //routes
 //route for home page 
-app.get("/index",(req,res)=>{
+app.get("/",(req,res)=>{
 
     //load index.handlebars
     res.render("index",{
