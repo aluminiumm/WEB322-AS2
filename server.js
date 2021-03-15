@@ -43,7 +43,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //routes
 //route for home page 
-app.get("/",(req,res)=>{
+app.get("/index",(req,res)=>{
 
     //load index.handlebars
     res.render("index",{
@@ -132,7 +132,7 @@ app.post("/formLogin",(req,res)=>{
     //There are no errors
     else
     {
-        res.redirect("/");
+        res.redirect("/index");
     }
 });
 
@@ -167,7 +167,7 @@ app.post("/formRegistration",(req,res)=>{
     //There are no errors
     else
     {
-        res.redirect("/");
+        res.redirect("/index");
     }
 });
 
