@@ -1,2 +1,4 @@
 node_modules/
 config/keys.env
+*.code-workspace
+*_bak
