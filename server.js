@@ -2,12 +2,13 @@ const express= require("express");
 const exphbs = require("express-handlebars");
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
+const dotenv = require('dotenv');
 
 //imported module 
 const fakeDB  = require("./model/FakeDB.js");
 
 const app = express();
-require('dotenv').config({ path: 'config/keys.env' });
+dotenv.config({ path: 'config/keys.env' });
 
 app.post("/formRegistration",(req,res)=>{
     sgMail.setApiKey(process.env.SEND_GRID_KEY)
