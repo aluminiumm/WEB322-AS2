@@ -28,7 +28,7 @@ app.post("/formRegistration",(req,res)=>{
         console.error(error)
       })
 })
-
+const HTTP_PORT = process.env.PORT;
 
 //Set Handlebars as the Express enginge for the app
 app.engine('handlebars', exphbs());
@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //routes
 //route for home page 
 app.get("/",(req,res)=>{
-
+    console.log("TRIED TO LOAD")
     //load index.handlebars
     res.render("index",{
         title : "VUDU",
@@ -172,7 +172,7 @@ app.post("/formRegistration",(req,res)=>{
 });
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = HTTP_PORT;
 app.listen(PORT, ()=>
 {
         console.log(`Web application is up and running!!!`);
